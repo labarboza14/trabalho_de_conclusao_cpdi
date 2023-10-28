@@ -46,7 +46,7 @@ body {
     margin-right: 20px;
     padding: 20px;
     line-height: 1.5em;
-    text-align: justify;
+    text-align: left;
     min-height: 100vh;
     
     overflow-x: hidden;
