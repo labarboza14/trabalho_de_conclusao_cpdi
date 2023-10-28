@@ -3,63 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eco Champs</title>
-    <link rel="shortcut icon" href="imagens/favicon-32x32.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css"
+    
+    <style>
+       
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #9ab4ff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.315);
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 6px;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid black;
+            border-radius: 3px;
+            background-color: white;
+            box-sizing: border-box;
+        }
+        textarea {
+            resize: vertical;
+        }
+        button[type="submit"] {
+            background-color: rgb(0, 0, 0);
+            color: #021330;
+            border:black;
+            border-radius: 3px;
+            padding: 12px 24px;
+            cursor: pointer;
+        }
+        body {
+            background-color: #9ab4ff;
+            font-family: var(--fonte-destaque);
+            color:#021330;
+            font-size: 1.5em;
+            text-indent: 20px;
+            margin: 20px;
+            margin-bottom: 20px;
+            padding: 20px;
+            line-height: 1.5em;
+            text-align: left;
+            min-height: 100vh;
+             }
+
+        header {
+            background-color: var(--cor2);
+            min-height: 150px;
+            min-width: 150;px
+            font-family: var(--fonte-destaque);
+            text-align:center;
+            padding-top: 40px;
+            
+        }
+
+        header > h1 {
+            color: var(--cor1);
+            font-family: var(--fonte-android);
+            font-weight: normal;
+            font-size: 3em;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 0px white;
+            background-image:linear-gradient(to top, var(--cor3), var(--cor4));
+            border-radius: 10px;
+            
+        }
+
+        header > p {
+            color:rgb(51, 50, 50);
+            font-family: var(--fonte-padrao);
+            font-size: 1.2em;
+            margin: auto;
+            padding-left: 20px;
+            padding-right: 30px;
+            margin-bottom: 20px;
+            max-width: 500px;
+            text-shadow: 2px 2px 0px rgba(15, 15, 15, 0.144);
+
+        }
+
+        nav {
+            background-color: var(--cor3);
+            padding: 10px;
+
+
+        }
+
+        nav > a {
+            color:#f3f3f5;
+            text-decoration: none;
+            padding: 10px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition-duration: 0.6s;
+        }
+
+        nav > a:hover {
+            background-color: #83f52c;
+            color:var(--cor1);
+
+
+        }       
+        
+    </style>
+
+    <title>Formulário de contato</title>
 </head>
 <body>
     <header>
-        <h1>Hello World!</h1>
+    <h1>Fale Conosco</h1>
+
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="pagina1.html">O Projeto</a>
+        <a href="pagina2.html">A Coleta Seletiva</a>
+        <a href="atividade.html">Atividades</a>
+    </nav>
+    
     </header>
+
+    <form method="post" action="<?php echo $_SERVER["PHP_SELF"]; ?>
+
+    <form action="mailto:gloriarbarboza@gmail.com" method="post" enctype="text/plain">
+
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
     
-<nav>
-    <a href="index.html">Home</a>
-    <a href="pagina1.html">Como Jogar Eco Champs</a>
-    <a href="pagina2.html">As cores da Coleta Seletiva</a>
-</nav>
-<main>
-    <body>
-        <h2 class="dev">Nasce uma dev</h2>
-    <section>
-        <p>
-            Entre linhas de código, surge a luz vibrante,<br>
-            De uma alma inquieta a cada instante. <br>
-            Nasce uma programadora, entusiasmada e audaz,<br>
-            Pronta para explorar o mundo digital voraz. 
-        </p> 
-        <br>
-        <p>
-            Com dedicação e curiosidade sem fim,<br>
-            De bugs a desafios, nada a faz desistir,<br>
-            Determinada em persistir,<br>
-            Segue em frente, preparada para progredir.
-        </p>
-        <br>       
-        <p>
-            Com sua mente aberta, explora novas fronteiras,<br>
-            Constrói seu caminho no mundo virtual,<br> 
-            Um elo forte em uma comunidade global.
-        </p>
-        <br>      
-        <p>
-            Inspirando a todos com sua determinação.<br>
-            Aprendizagem constante é um convite,<br>
-            Pra lembrarmos que o céu é o seu limite!
-        </p>
-    </section>
-            
-<h3 class="git">Acesse o meu <a href="https://labarboza14.github.io/index.html" target="_blank">portfólio.</a> Lá você encontrará os códigos das atividades realizadas durante o Curso Além de Jogar, eu Faço Jogos e outros projetos.</h3>
-<br> 
-    <section id="nos">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeAaRfAR_eRTNB4phYcOOXH5AUlTCkF1B_mLMx4l6F83STBoA/viewform?embedded=true" width="640" height="741" frameborder="0" marginheight="0" marginwidth="0">Carregando…</iframe>
-    </section>
     
-</main>
+    <label for="email">E-mail:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+    
+    <label for="mensagem">Mensagem:</label><br>
+    <textarea id="mensagem" name="mensagem" rows="4" cols="30" required></textarea><br><br>
+    
+    <input type="submit" value="Enviar">
+    <input type="reset" value="Limpar">
+    </form>
 
+    </body>
+    </html>
 
-<footer>
-    <p>Desenvolvido por <a href="https://www.linkedin.com/in/barbozagloria/" target="_blank">Glória B.</a></p>
-</footer>
+    <footer>
+        <p align="center">Desenvolvido por <a href="https://www.linkedin.com/in/barbozagloria/" target="_blank">Glória B.</a></p>
+    </footer>
 
-</body>
-</html>
+    </body>
+    </html>
