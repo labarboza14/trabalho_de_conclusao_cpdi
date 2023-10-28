@@ -16,6 +16,7 @@
 #83f52c
 */
 
+   
 :root { 
     --cor1: #021330;
     --cor2: #2066cf;
@@ -47,6 +48,8 @@ body {
     line-height: 1.5em;
     text-align: justify;
     min-height: 100vh;
+    
+    overflow-x: hidden;
 }
 
 header {
@@ -197,16 +200,16 @@ main >strong {
 }
 
 
-.pictures{ 
-    display: flex; 
-    justify-content: center; 
-    align-items:center; 
-    position: relative; 
-    margin-bottom: 20px; 
+main img {
     width: 100%; 
-    height: auto; 
-    }  
-  
+ }
+ 
+ main img.pequena {
+     width: 350px;
+     margin: auto;
+     display: block;
+ }
+
  div.video {
    
     position:relative;
